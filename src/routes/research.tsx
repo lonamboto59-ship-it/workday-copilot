@@ -33,8 +33,8 @@ function ResearchPage() {
   const set = (v: string) => setValues((s) => ({ ...s, [mode]: v }));
 
   const run = async () => {
-    if (!value.trim()) return toast.error("Please provide some input first.");
-    if (mode === "url" && !/^https?:\/\/\S+\.\S+/.test(value.trim())) return toast.error("Enter a valid URL starting with http(s)://");
+    if (!value.trim()) { toast.error("Please provide some input first."); return; }
+    if (mode === "url" && !/^https?:\/\/\S+\.\S+/.test(value.trim())) { toast.error("Enter a valid URL starting with http(s)://"); return; }
     setLoading(true);
     try {
       const r = await generateAI({ data: { kind: "research", mode, input: value.trim() } });

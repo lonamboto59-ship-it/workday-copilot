@@ -33,7 +33,7 @@ function EmailPage() {
   const [loading, setLoading] = useState(false);
 
   const run = async () => {
-    if (!recipient.trim() || !purpose.trim()) return toast.error("Please add a recipient and purpose.");
+    if (!recipient.trim() || !purpose.trim()) { toast.error("Please add a recipient and purpose."); return; }
     setLoading(true);
     try {
       const r = await generateAI({ data: { kind: "email", recipient, purpose, details, tone } });
