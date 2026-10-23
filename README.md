@@ -1,44 +1,136 @@
-# Workday Copilot
+# AI Workplace Productivity Assistant
 
-Build **AI Workplace Productivity Assistant**, a modern, responsive SaaS web app using React and Tailwind CSS.
+## 1. Project Overview
 
-**Design:** Clean professional blue and white theme, modern dashboard, collapsible sidebar, icons, rounded cards, subtle shadows, responsive layouts, and mobile friendly navigation.
+The **AI Workplace Productivity Assistant** is a modern, responsive web application designed to help professionals improve productivity by automating everyday workplace tasks using Artificial Intelligence (AI).
 
-**Core features:**
+The application provides tools for generating professional emails, researching information, summarising content, identifying key insights, and interacting with an AI workplace chatbot. It features a clean, professional blue and white interface designed for ease of use across desktop, tablet, and mobile devices.
 
-1. **Smart Email Generator:** Users enter the recipient, purpose, key details, and select Formal, Friendly, or Persuasive tone. Generate professional, context specific emails with editable outputs, copy, and regenerate buttons.
+The project aims to reduce time spent on routine tasks, improve workplace communication, and support informed decision making through AI generated content.
 
-2. **AI Research Assistant:** Users enter a topic, paste an article, or provide a URL. Produce structured summaries, key findings, insights, and actionable recommendations. Clearly explain that live website retrieval may require an external integration.
+## 2. Features Implemented
 
-3. **AI Chatbot:** Interactive workplace assistant with a chat interface, contextual responses, chat history during the session, editable outputs, and copy functionality.
+### Smart Email Generator
 
-**Dashboard:** Include a welcome header, feature cards, sidebar navigation, input forms, output panels, loading indicators, empty states, and clear navigation between all three tools.
+* Generates professional emails based on user instructions and context.
+* Supports Formal, Friendly, and Persuasive communication tones.
+* Allows users to edit, copy, and regenerate AI generated emails.
 
-**AI requirements:** Use structured, context aware prompts to generate specific, relevant responses rather than generic templates. 
+### AI Research Assistant
 
-**Technical requirements:** Frontend only. No backend, database, authentication, or paid integrations. Do not expose API keys. Make all buttons and controls functional. Use session only state for temporary conversations and editable results.
+* Accepts research topics, pasted articles, and website URLs.
+* Generates summaries and identifies key findings.
+* Provides AI generated insights and actionable recommendations.
+* Supports structured research outputs for easier understanding.
 
-**Responsible AI:** Display a concise disclaimer that AI outputs may contain errors and must be reviewed before professional use.
+### AI Chatbot
 
-Prioritise a polished, functional prototype with reusable components, accessible controls, clean code, and excellent responsive design. Build the complete application in one pass and avoid unnecessary features.
+* Provides an interactive AI powered workplace assistant.
+* Responds to user prompts with context relevant to the conversation.
+* Supports follow up questions and conversational interaction.
+* Allows users to copy and edit generated responses.
 
-This project was built with [Lovable](https://lovable.dev).
+### Dashboard and User Interface
 
-## Build with Lovable
+* Modern SaaS style dashboard.
+* Sidebar navigation between application features.
+* Responsive layout for desktop and mobile devices.
+* Reusable interface components and consistent styling.
+* Loading indicators, input validation, and clear feedback.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/39b178d3-9159-4c55-b121-175ddb298458).
+### Responsible AI
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+* Informs users that AI generated content may contain inaccuracies.
+* Encourages users to verify information before using it professionally.
+* Promotes responsible and ethical use of AI generated outputs.
 
-## Development
+## 3. Technologies and Tools Used
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+* **React:** Building interactive user interfaces.
+* **Tailwind CSS:** Styling and responsive layouts.
+* **TypeScript:** Type safety, if enabled in the project.
+* **Vite:** Development server and build tooling, if used by the generated project.
+* **Lovable:** AI assisted application development.
+* **AI model/API integration:** Generating contextual emails, research summaries, insights, and chatbot responses.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+## 4. Setup Instructions
+
+### Prerequisites
+
+* Node.js and npm installed.
+* Access to the project source code.
+* An AI provider and valid API credentials if the application requires an external AI service.
+
+### Installation
+
+1. Clone or download the project repository.
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd ai-workplace-productivity-assistant
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Configure the AI integration.
+
+   Add the required AI provider configuration using the project's supported environment variables or secure integration settings. Never expose secret API keys in client side code.
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open the local URL displayed in the terminal to access the application.
+
+### Production Build
+
+To build the application for production, run:
+
+```bash
+npm run build
 ```
+
+To preview the production build locally, run:
+
+```bash
+npm run preview
+```
+
+## 5. Project Architecture
+
+The application is designed around three primary modules:
+
+* **Email Generator:** Collects email requirements and sends structured prompts to the AI model.
+* **Research Assistant:** Processes supplied research material and requests summaries, insights, and recommendations.
+* **AI Chatbot:** Accepts user prompts and displays AI generated conversational responses.
+
+The frontend manages user interactions and presentation. AI requests must be handled through a suitable AI integration. A backend is not required if the chosen platform provides a secure AI integration mechanism; otherwise, a secure server side component may be necessary.
+
+## 6. Team Members
+
+**Project Developer:** Lona Gwanisheni
+
+**Project Role:** Application design, requirements definition, AI productivity workflow planning, and development using Lovable.
+
+## 7. Responsible AI Disclaimer
+
+AI generated outputs may contain inaccurate, incomplete, or outdated information. Users should independently verify important facts and review generated content before sending emails, making decisions, or using research findings in a professional setting.
+
+## 8. Future Improvements
+
+* Add additional email templates and workplace writing tools.
+* Support document uploads and expanded research capabilities.
+* Introduce user preferences and export options.
+* Improve source verification and research citations.
+* Add secure integrations with workplace productivity platforms.
+
+## 9. License
+
+No license has been specified for this project. Add an appropriate open source or proprietary license before distributing the application.
