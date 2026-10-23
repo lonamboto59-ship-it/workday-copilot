@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- AI calls go through one server function (src/lib/ai.functions.ts) with per-tool prompts; keeps the AI key server-side while app state stays session-only in the browser.
