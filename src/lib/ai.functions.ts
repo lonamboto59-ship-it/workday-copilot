@@ -90,7 +90,7 @@ function extractText(res: unknown): string {
 }
 
 export const generateAI = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => inputSchema.parse(d))
+  .validator((d: unknown) => inputSchema.parse(d))
   .handler(async ({ data }) => {
     const { generateResponse, GatewayError, RateLimitError, PaymentRequiredError } = await import(
       "@lovable.dev/ai-gateway"
